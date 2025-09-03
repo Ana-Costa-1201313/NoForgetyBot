@@ -1,0 +1,22 @@
+{
+  "birthdays": [
+    { "name": "Catarina", "date": "03-03" },
+    { "name": "Pai do Gui", "date": "03-18" },
+    { "name": "Bea", "date": "04-02" },
+    { "name": "Bu", "date": "04-13" },
+    { "name": "Mãe", "date": "04-19" },
+    { "name": "Pai", "date": "04-20" },
+    { "name": "Berta", "date": "04-26" },
+    { "name": "Mãe do Gui", "date": "05-06" },
+    { "name": "Maria", "date": "05-14" },
+    { "name": "Leo", "date": "06-21" },
+    { "name": "Gui", "date": "07-30" },
+    { "name": "Tia Flávia", "date": "08-08" },
+    { "name": "Daniel ESEP", "date": "10-03" },
+    { "name": "Tiago", "date": "11-03" },
+    { "name": "Rita ISEP", "date": "11-06" },
+    { "name": "Chuchus", "date": "12-02" },
+    { "name": "César", "date": "12-16" },
+    { "name": "Cris", "date": "12-24" }
+  ]
+}
