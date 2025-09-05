@@ -3,14 +3,14 @@ from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 import json
-from pathlib import Path
+from datetime import datetime
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 intents = discord.Intents.default()
 
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix=None, intents=intents)
 
 @bot.event
 async def on_ready():
@@ -21,12 +21,18 @@ async def on_ready():
     except Exception as e:
         print(e)
 
-@bot.tree.command(name="test", description="Replies with hello!")
+@bot.tree.command(name="hello", description="Replies with hello!")
 async def test_command(interaction: discord.Interaction):
     await interaction.response.send_message("Hello!!")
 
-@bot.tree.command(name="add_bday", description="Add a birthday!")
+@bot.tree.command(name="add_bday", description="Add a birthday! Format: MM-DD")
 async def add_bday(interaction: discord.Interaction, name: str, date: str):
+    try:
+        datetime.strptime(f"2000-{date}", "%Y-%m-%d")
+    except ValueError:
+        await interaction.response.send_message("Invalid date format. Please use MM-DD.")
+        return   
+    
     bdays = load_birthdays()
 
     new_bday = {"name": name, "date": date}
