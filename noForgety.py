@@ -40,9 +40,16 @@ async def check_today_birthdays(interaction: discord.Interaction):
     today = datetime.now().strftime("%m-%d")
     bdays = load_birthdays()
 
+    messages = []
+    
     for bday in bdays["birthdays"]:
         if bday["date"] == today:
-            await interaction.response.send_message(f"Today is {bday['name']}'s birthday!!")
+            messages.append(f"Today is {bday['name']}'s birthday!!")
+    
+    if not messages:
+        messages.append("No birthdays today!")
+
+    await interaction.response.send_message("\n".join(messages))
 
 def validate_date(date: str) -> bool:
     try:
