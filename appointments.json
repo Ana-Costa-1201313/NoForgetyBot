@@ -1,0 +1,16 @@
+{
+    "appointments": [
+        {
+            "name": "Consulta medica as 15h",
+            "date": "09-07"
+        },
+        {
+            "name": "Dentista as 11h",
+            "date": "09-08"
+        },
+        {
+            "name": "Reuniao com a chefe as 10h",
+            "date": "09-07"
+        }
+    ]
+}
