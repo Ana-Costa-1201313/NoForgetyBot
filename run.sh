@@ -1,1 +1,2 @@
-python noForgety.py
+cd ./src
+python main.py
