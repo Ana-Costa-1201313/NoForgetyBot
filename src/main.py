@@ -8,7 +8,7 @@ from datetime import datetime, time, timedelta
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-CHANNEL_ID = 1412810786492907520
+CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
 
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix=None, intents=intents)
